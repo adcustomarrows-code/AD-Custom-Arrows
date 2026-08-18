@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>A&D Custom Arrows | Custom Arrow Builder</title>
+<meta name="description" content="Build your custom A&D hunting arrows and see your estimated price update live.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <a class="brand" href="#top"><b>A&D</b> CUSTOM ARROWS</a>
+  <nav><a href="#builder">Arrow Builder</a><a href="#process">Process</a><a href="#quote">Quote</a></nav>
+  <a class="top-btn" href="#builder">Build Yours</a>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="hero-inner">
+    <p class="eyebrow">CUSTOM ARROW BUILDING</p>
+    <h1>PRECISION BUILT.<br><span>HUNT READY.</span></h1>
+    <p>Configure your arrows around your bow, hunting application, and exact specifications. Your estimated price updates as you build.</p>
+    <a class="button" href="#builder">START BUILDING</a>
+  </div>
+</section>
+
+<section class="builder-wrap" id="builder">
+  <div class="builder-head">
+    <div>
+      <p class="eyebrow">A&D CUSTOM ARROW BUILDER</p>
+      <h2>Build Your Setup</h2>
+      <p>Choose your components below. A&D will verify final compatibility, spine, availability, and pricing before the order is approved.</p>
+    </div>
+    <div class="progress"><div id="progressBar"></div></div>
+  </div>
+
+  <div class="builder-layout">
+    <div class="steps">
+      <section class="step-card">
+        <div class="step-title"><span>01</span><h3>Choose Your Shaft</h3></div>
+        <div class="option-grid" id="shaftOptions">
+          <label class="product-option active"><input type="radio" name="shaft" value="fmj5" checked><div><b>Easton FMJ 5mm</b><small>Deep penetration • hunting favorite</small></div><strong>$170/doz.</strong></label>
+          <label class="product-option"><input type="radio" name="shaft" value="fmj4"><div><b>Easton FMJ 4mm</b><small>Smaller diameter • premium hunting</small></div><strong>$165/doz.</strong></label>
+          <label class="product-option"><input type="radio" name="shaft" value="axis"><div><b>Easton Axis</b><small>Reliable all-around hunting shaft</small></div><strong>$145/doz.</strong></label>
+          <label class="product-option"><input type="radio" name="shaft" value="victory"><div><b>Victory RIP TKO</b><small>Lightweight performance option</small></div><strong>$155/doz.</strong></label>
+          <label class="product-option"><input type="radio" name="shaft" value="blackeagle"><div><b>Black Eagle Rampage</b><small>Durable hunting option</small></div><strong>$150/doz.</strong></label>
+        </div>
+      </section>
+
+      <section class="step-card">
+        <div class="step-title"><span>02</span><h3>Spine & Arrow Length</h3></div>
+        <div class="fields">
+          <label>Spine<select id="spine">
+            <option value="300">300</option><option value="250">250</option><option value="340">340</option><option value="400">400</option><option value="500">500</option><option value="unknown">Not sure — recommend one</option>
+          </select></label>
+          <label>Finished Arrow Length<input id="length" type="number" step=".25" min="20" max="35" placeholder='29.0"'></label>
+        </div>
+        <p class="hint">If you're unsure about spine, select “Not sure.” A&D will review your bow specifications before finalizing the build.</p>
+      </section>
+
+      <section class="step-card">
+        <div class="step-title"><span>03</span><h3>Build Level</h3></div>
+        <div class="option-grid">
+          <label class="product-option"><input type="radio" name="tier" value="standard" checked><div><b>Standard</b><small>Core assembly + quality check</small></div><strong>$35</strong></label>
+          <label class="product-option active"><input type="radio" name="tier" value="premium"><div><b>Premium <em>POPULAR</em></b><small>Matched + spin tested + build card</small></div><strong>$50</strong></label>
+          <label class="product-option"><input type="radio" name="tier" value="elite"><div><b>Elite</b><small>Optimization + detailed QC</small></div><strong>$75</strong></label>
+        </div>
+      </section>
+
+      <section class="step-card">
+        <div class="step-title"><span>04</span><h3>Fletching</h3></div>
+        <div class="fields">
+          <label>Fletching<select id="fletching">
+            <option value="standard">3-Fletch Standard</option><option value="premium">3-Fletch Premium +$15/doz.</option><option value="four">4-Fletch +$15/doz.</option>
+          </select></label>
+          <label>Vane Color<select id="vaneColor"><option>Black</option><option>Orange</option><option>White</option><option>Green</option><option>Red</option><option>Custom</option></select></label>
+        </div>
+        <div class="swatches" id="swatches">
+          <button data-color="Black" class="swatch black active"></button><button data-color="Orange" class="swatch orange"></button><button data-color="White" class="swatch white"></button><button data-color="Green" class="swatch green"></button><button data-color="Red" class="swatch red"></button>
+        </div>
+      </section>
+
+      <section class="step-card">
+        <div class="step-title"><span>05</span><h3>Components</h3></div>
+        <div class="component-grid">
+          <label>Insert / Point Weight<select id="insert">
+            <option value="standard">Standard component</option><option value="brass50">50gr brass +$15/doz.</option><option value="brass75">75gr brass +$20/doz.</option><option value="brass100">100gr brass +$25/doz.</option><option value="custom">Custom component — quote required</option>
+          </select></label>
+          <label>Nock<select id="nock">
+            <option value="standard">Standard nock</option><option value="premium">Premium nock +$10/doz.</option>
+          </select></label>
+        </div>
+      </section>
+
+      <section class="step-card">
+        <div class="step-title"><span>06</span><h3>Customization & Services</h3></div>
+        <div class="check-grid">
+          <label><input id="weightMatch" type="checkbox"><span><b>Weight matching</b><small>+$20/doz.</small></span></label>
+          <label><input id="spineMatch" type="checkbox"><span><b>Spine matching</b><small>+$25/doz.</small></span></label>
+          <label><input id="wraps" type="checkbox"><span><b>Custom wraps</b><small>+$15/doz.</small></span></label>
+          <label><input id="broadhead" type="checkbox"><span><b>Broadhead setup</b><small>+$20/doz.</small></span></label>
+          <label><input id="tuning" type="checkbox"><span><b>Bow / arrow tuning</b><small>+$50/setup</small></span></label>
+          <label><input id="rush" type="checkbox"><span><b>Rush order</b><small>+$25/order</small></span></label>
+        </div>
+      </section>
+
+      <section class="step-card">
+        <div class="step-title"><span>07</span><h3>Your Bow & Hunting Setup</h3></div>
+        <div class="fields">
+          <label>Draw Weight (lbs)<input id="drawWeight" type="number" placeholder="70"></label>
+          <label>Draw Length (in.)<input id="drawLength" type="number" step=".1" placeholder="29"></label>
+          <label>Broadhead Weight<select id="headWeight"><option>100 gr</option><option selected>125 gr</option><option>150 gr</option><option>175 gr</option><option>Other / Not sure</option></select></label>
+          <label>Primary Use<select id="use"><option>Whitetail Hunting</option><option>Elk / Western Hunting</option><option>Turkey Hunting</option><option>3D Archery</option><option>Target Shooting</option></select></label>
+        </div>
+        <label class="wide">Quantity<select id="quantity"><option value="6">6 arrows</option><option value="12" selected>12 arrows</option><option value="18">18 arrows</option><option value="24">24 arrows</option></select></label>
+      </section>
+    </div>
+
+    <aside class="summary-card">
+      <div class="summary-sticky">
+        <p class="eyebrow">YOUR BUILD</p>
+        <h3>Live Estimate</h3>
+        <div class="total" id="total">$0.00</div>
+        <div class="per" id="perArrow">$0.00 / arrow</div>
+        <div class="summary-lines">
+          <div><span>Shafts & materials</span><b id="materials">$0.00</b></div>
+          <div><span>Build labor</span><b id="labor">$0.00</b></div>
+          <div><span>Components</span><b id="components">$0.00</b></div>
+          <div><span>Services & upgrades</span><b id="services">$0.00</b></div>
+          <div><span>Shop / overhead</span><b>$15.00</b></div>
+        </div>
+        <div class="summary-build">
+          <b id="buildName">Easton FMJ 5mm • Premium</b>
+          <span id="buildDetails">12 arrows • 3-fletch • Black</span>
+        </div>
+        <div class="recommend">
+          <b>A&D Recommendation</b>
+          <p id="recommendation">Enter your draw weight and draw length for a more useful build review.</p>
+        </div>
+        <button class="button full" id="addQuote">ADD BUILD TO QUOTE</button>
+        <p class="estimate-note">This is an estimate, not a final invoice. A&D will verify compatibility, inventory, and final pricing.</p>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section class="quote-section" id="quote">
+  <div class="quote-inner">
+    <div>
+      <p class="eyebrow">YOUR QUOTE</p>
+      <h2>Ready to Submit?</h2>
+      <p>Your selected build will be included in the quote request. Add your contact information and A&D can review the setup.</p>
+    </div>
+    <div class="quote-card">
+      <div id="quoteItems"><p class="empty">Your build will appear here after you click “Add Build to Quote.”</p></div>
+      <div class="quote-total"><span>Estimated total</span><b id="quoteTotal">$0.00</b></div>
+      <div class="fields">
+        <label>Name<input id="customerName" placeholder="Your name"></label>
+        <label>Email<input id="customerEmail" type="email" placeholder="you@email.com"></label>
+        <label>Phone<input id="customerPhone" placeholder="Optional"></label>
+      </div>
+      <label>Notes<textarea id="customerNotes" placeholder="Anything else A&D should know about your setup?"></textarea></label>
+      <button class="button full" id="submitQuote">SUBMIT QUOTE REQUEST</button>
+      <p class="estimate-note">Replace the Google Form URL in <code>script.js</code> to send customers to your live form.</p>
+    </div>
+  </div>
+</section>
+
+<section class="dark" id="process">
+  <div class="section">
+    <p class="eyebrow">THE A&D STANDARD</p><h2>Built With Purpose.</h2>
+    <div class="process">
+      <article><b>01</b><h3>Analyze</h3><p>Review your bow, draw weight, draw length, broadhead and hunting application.</p></article>
+      <article><b>02</b><h3>Configure</h3><p>Choose shaft, spine, length, components, fletching and customization.</p></article>
+      <article><b>03</b><h3>Build & Inspect</h3><p>Every set is assembled and quality checked before it leaves A&D.</p></article>
+      <article><b>04</b><h3>Confirm</h3><p>We verify your build and final price before the order is placed.</p></article>
+    </div>
+  </div>
+</section>
+</main>
+<footer><b>A&D CUSTOM ARROWS</b><span>Precision Built. Hunt Ready. • © 2026</span></footer>
+<script src="script.js"></script>
+</body>
+</html>
